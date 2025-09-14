@@ -1,0 +1,9 @@
+# Test your FastAPI endpoints
+
+
+GET http://127.0.0.1:8000/analyze_emotion
+Accept: application/json
+
+###
+GET http://127.0.0.1:8000/attention
+Accept: application/json
