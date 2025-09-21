@@ -1,6 +1,6 @@
 import cv2
 from pydantic import BaseModel
-from typing import Dict, Any, Tuple
+from typing import Dict, Any, Tuple, Optional
 import mediapipe as mp
 from deepface import DeepFace
 import math
@@ -56,9 +56,9 @@ class AttentionResult(BaseModel):
     focused: bool
     score: float # 0~1
     reason: str
-    yaw_deg: float = None
-    pitch_deg: float = None
-    eye_open_prob: float = None # 简易眼睛张开概率（来自 EAR 映射）
+    yaw_deg: Optional[float] = None
+    pitch_deg: Optional[float] = None
+    eye_open_prob: Optional[float] = None # 简易眼睛张开概率（来自 EAR 映射）
     frame_ts: float
 
 # --------- 工具函数 ---------
